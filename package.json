@@ -1,0 +1,40 @@
+{
+    "name": "slack-github-project",
+    "version": "1.0.0",
+    "description": "slack app that presents card changes on a github project",
+    "main": "index.js",
+    "scripts": {
+        "test": "npm test",
+        "watch": "babel-watch --watch src index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acaldas/slack-github-project.git"
+    },
+    "keywords": [
+        "slack",
+        "github",
+        "project",
+        "scrum",
+        "agile"
+    ],
+    "author": "acaldas",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/acaldas/slack-github-project/issues"
+    },
+    "homepage": "https://github.com/acaldas/slack-github-project#readme",
+    "dependencies": {
+        "@octokit/rest": "^15.9.2",
+        "dotenv": "^6.0.0",
+        "koa": "^2.5.1",
+        "koa-bodyparser": "^4.2.1",
+        "koa-router": "^7.4.0",
+        "request": "^2.87.0",
+        "request-promise-native": "^1.0.5"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-watch": "^2.0.7"
+    }
+}
