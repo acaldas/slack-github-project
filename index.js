@@ -56,20 +56,19 @@ const _parseCard = async (card, action, changes) => {
 
     let issue = await github.getCardIssue(card);
     let message = null;
+    let issueText = `*Issue:* <${issue.html_url}|${issue.title}>`;
     if (action === "created") {
         let creator = card.creator.login;
         let newColumn = github.getColumnInfo(card.column_id);
-        message = `*Issue:* _${issue.title}_ *-* Added to *${
+        message = `${issueText} *-* Added to *${
             newColumn.name
         }* by *${creator}*`;
     } else if (action === "moved") {
         let newColumn = github.getColumnInfo(card.column_id);
         let oldColumn = github.getColumnInfo(changes.column_id.from);
-        message = `*Issue:* _${issue.title}_ *-* *${oldColumn.name} => ${
-            newColumn.name
-        }*`;
+        message = `${issueText} *-* *${oldColumn.name} => ${newColumn.name}*`;
     } else if (action === "deleted") {
-        message = `*Issue:* ${issue.title} *-* Removed from project`;
+        message = `${issueText} *-* Removed from project`;
     } else {
         return false;
     }
