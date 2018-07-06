@@ -35,33 +35,4 @@ module.exports = function() {
     };
 
     return this;
-    // let cards = await Promise.all(
-    //     columns.data.map(async column => {
-    //         let columnCards = await github.projects.getProjectCards({
-    //             column_id: column.id
-    //         });
-    //         let cardsInfo = await Promise.all(
-    //             columnCards.data.map(async card => {
-    //                 const number = card.content_url.substring(
-    //                     card.content_url.lastIndexOf("/") + 1
-    //                 );
-    //                 let issue = await github.issues.get({
-    //                     owner: process.env.GITHUB_OWNER,
-    //                     repo: process.env.GITHUB_REPO,
-    //                     number: number
-    //                 });
-    //                 return {
-    //                     number: issue.data.number,
-    //                     title: issue.data.title,
-    //                     updated_at: issue.data.updated_at,
-    //                     column: column.title
-    //                 };
-    //             })
-    //         );
-    //         return {
-    //             column: column.name,
-    //             cards: cardsInfo
-    //         };
-    //     })
-    // );
 };
