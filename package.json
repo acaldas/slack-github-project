@@ -30,8 +30,7 @@
         "koa": "^2.5.1",
         "koa-bodyparser": "^4.2.1",
         "koa-router": "^7.4.0",
-        "request": "^2.87.0",
-        "request-promise-native": "^1.0.5"
+        "request": "^2.87.0"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",
